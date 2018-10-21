@@ -58,19 +58,8 @@
                 text-transform: uppercase;
             }
 
-            .link{
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 30px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-
-            }
-
             .m-b-md {
-                margin: 30px;
+                margin-bottom: 30px;
             }
         </style>
     </head>
@@ -92,10 +81,9 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
-
+                    Welcome to About Page
                 </div>
-                <a class="link m-b-md" href="/about">About</a>
+
                 <div class="links">
                     <a href="https://laravel.com/docs">Documentation</a>
                     <a href="https://laracasts.com">Laracasts</a>
