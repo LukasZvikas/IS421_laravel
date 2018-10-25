@@ -77,7 +77,7 @@
 </head>
 
 <body>
-@include('includes.menu')
+{{--@include('includes.menu')--}}
 <div class="flex-center position-ref full-height">
     @if (Route::has('login'))
         <div class="top-right links">
@@ -98,7 +98,7 @@
             Laravel
 
         </div>
-        <a class="link m-b-md" href="/about">About</a>
+        <a class="link m-b-md" href="/login">About</a>
         <div class="links">
             <a href="https://laravel.com/docs">Documentation</a>
             <a href="https://laracasts.com">Laracasts</a>

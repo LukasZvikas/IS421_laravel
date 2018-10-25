@@ -62,9 +62,6 @@
         }
 
 
-
-
-
     </style>
     @include("includes.head")
 </head>
