@@ -19,9 +19,7 @@ Route::get('/login', function () {
     return view('pages.login');
 });
 
-Route::get('/contact', function () {
-    return view('pages.contact');
-});
+Route::get('/contact', 'PagesController@contact')->name("contact");
 
 Route::post('/contact', function () {
     return view('pages.contact');
