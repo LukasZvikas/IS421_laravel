@@ -11,15 +11,22 @@ namespace Tests\Unit;
 
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use \App\User;
 
 class AuthTest extends TestCase
 {
 
     public function testUserInsert()
     {
-        $user = factory(\App\User::class)->make();
+        $user = factory(User::class)->make();
         $this->assertTrue($user->save());
     }
+
+    public function testUserUpdate() {
+        $user = User::find(1);
+        $user->name = 'Steve Smith';
+        $this->assertTrue($user->save());
+}
 
 }
 
