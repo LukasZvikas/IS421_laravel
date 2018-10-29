@@ -23,6 +23,13 @@ class AuthTest extends TestCase {
         $response->assertStatus(200);
     }
 
+    function testLoginPage() {
+
+        $response = $this->get("/login");
+
+        $response->assertStatus(200);
+    }
+
 
 }
 
