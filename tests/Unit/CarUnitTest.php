@@ -36,11 +36,15 @@ class CarTest extends TestCase
     }
 
     public function testCarCount(){
-
         $cars = Car::All();
         $carCount = $cars->count();
         $this->assertEquals(50, $carCount);
+    }
 
+    public function testCarYearType() {
+        $car = Car::find(1);
+        $carYear = (int) $car->year;
+        $this->assertInternalType('integer', $carYear);
     }
 
 }
