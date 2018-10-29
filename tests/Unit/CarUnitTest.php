@@ -18,8 +18,13 @@ class CarTest extends TestCase
 
         $car = factory(Car::class)->make();
         $this->assertTrue($car->save());
-
         $car->delete();
+    }
+
+    public function testCarYearUpdate() {
+        $car = Car::find(1);
+        $car->year = 2000;
+        $this->assertTrue($car->save());
     }
 
 }
