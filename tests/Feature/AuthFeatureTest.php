@@ -14,23 +14,34 @@ use App\User;
 
 
 
-class AuthTest extends TestCase {
+class PagesTest extends TestCase
+{
 
-    function testRegisterPage() {
+    function testRegisterPage()
+    {
 
         $response = $this->get("/register");
 
         $response->assertStatus(200);
     }
 
-    function testLoginPage() {
+    function testLoginPage()
+    {
 
         $response = $this->get("/login");
 
         $response->assertStatus(200);
+
     }
 
+    function testAboutPage()
+    {
 
+        $response = $this->get("/about");
+
+        $response->assertStatus(200);
+
+    }
 }
 
 
