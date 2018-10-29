@@ -27,6 +27,14 @@ class AuthTest extends TestCase
         $user->name = 'Steve Smith';
         $this->assertTrue($user->save());
 }
+    public function testUserDelete(){
+        $user = new User();
+        $user->name = 'Lukas';
+        $user->email = 'lzvikas1@gmail.com';
+        $user->password = '12345678';
+        $user->save();
+        $this->assertTrue($user->delete());
+    }
 
 }
 
