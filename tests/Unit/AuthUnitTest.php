@@ -20,6 +20,8 @@ class AuthTest extends TestCase
     {
         $user = factory(User::class)->make();
         $this->assertTrue($user->save());
+
+        $user->delete();
     }
 
     public function testUserUpdate() {
@@ -34,6 +36,14 @@ class AuthTest extends TestCase
         $user->password = '12345678';
         $user->save();
         $this->assertTrue($user->delete());
+    }
+
+    public function testUserCount(){
+
+        $users = User::All();
+        $userCount = $users->count();
+        $this->assertEquals(50, $userCount);
+
     }
 
 }
